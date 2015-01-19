@@ -1,17 +1,33 @@
 package com.fathom.fathomdrones;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-public class MainActivity extends ActionBarActivity {
+/**
+ * Splash Screen: This is the activity that is initially launched
+ * @author kyle.magnuson
+ *
+ */
+public class SplashScreen extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash_screen);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+        	@Override
+        	public void run() {
+        		//Wait 3 seconds while displaying splash screen
+        	}
+        }, 3000);
+        Intent mainMenu = new Intent("com.fathom.fathomdrones.MAINMENU");
+		startActivity(mainMenu);
+		finish();
     }
 
 

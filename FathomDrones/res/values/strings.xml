@@ -4,5 +4,10 @@
     <string name="app_name">Fathom Drones</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="load">Loading</string>
+    
+    
+    <!-- Constant size dimensions -->
+    <string name="large_text">Large Text</string>
 
 </resources>
